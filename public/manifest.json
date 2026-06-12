@@ -1,0 +1,17 @@
+{
+    "name": "Lamont Addo",
+    "short_name": "Lamont",
+    "description": "Software Engineer, Founder, AWS Solutions Architect",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#020617",
+    "theme_color": "#020617",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/lamont-app-icon.jpg",
+        "sizes": "512x512",
+        "type": "image/jpeg"
+      }
+    ]
+  }
