@@ -71,9 +71,18 @@ export default function Home() {
       </div>
 
       <style>{`
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          background: #020617;
+          overscroll-behavior: none;
+        }
+
         .la-main {
           position: relative;
           min-height: 100vh;
+          min-height: 100svh;
           overflow: hidden;
           background: #020617;
           font-family: Inter, Arial, sans-serif;
@@ -105,6 +114,7 @@ export default function Home() {
           position: relative;
           z-index: 2;
           min-height: 100vh;
+          min-height: 100svh;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -359,29 +369,55 @@ export default function Home() {
 
         @media (max-width: 850px) {
           .la-stage {
+            min-height: 100vh;
             min-height: 100svh;
-            overflow-x: auto;
-            justify-content: flex-start;
-            padding: 2rem 2rem 7rem;
-            scroll-snap-type: x mandatory;
+            overflow: hidden;
+            justify-content: center;
+            align-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.1rem 1.35rem;
+            padding: 2.5rem 1.25rem 7.5rem;
           }
 
           .la-orb-link {
-            flex: 0 0 185px;
-            width: 185px;
-            scroll-snap-align: center;
+            width: 100%;
+            max-width: 155px;
+            justify-self: center;
+            scroll-snap-align: unset;
           }
 
           .la-globe {
-            width: 185px;
-            height: 185px;
+            width: 155px;
+            height: 155px;
+          }
+
+          .la-orb-name {
+            margin-top: .85rem;
+            font-size: .95rem;
           }
 
           .la-install-hint {
             bottom: .85rem;
             border-radius: 22px;
-            font-size: .78rem;
-            padding: .75rem .9rem;
+            font-size: .76rem;
+            padding: .72rem .9rem;
+            width: min(90vw, 520px);
+          }
+        }
+
+        @media (max-width: 380px) {
+          .la-stage {
+            gap: 1.7rem 1rem;
+          }
+
+          .la-globe {
+            width: 138px;
+            height: 138px;
+          }
+
+          .la-orb-link {
+            max-width: 138px;
           }
         }
       `}</style>
