@@ -62,6 +62,14 @@ export default function Home() {
         ))}
       </section>
 
+      <div className="la-install-hint">
+        <span className="la-install-dot" />
+        <span>
+          Add this portal to your Home Screen: tap <strong>Menu</strong> →{" "}
+          <strong>Share</strong> → <strong>Add to Home Screen</strong>.
+        </span>
+      </div>
+
       <style>{`
         .la-main {
           position: relative;
@@ -101,7 +109,7 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           gap: clamp(2rem, 5vw, 5rem);
-          padding: 3rem;
+          padding: 3rem 3rem 6rem;
         }
 
         .la-orb-link {
@@ -244,6 +252,44 @@ export default function Home() {
           animation: none;
         }
 
+        .la-install-hint {
+          position: fixed;
+          left: 50%;
+          bottom: 1.25rem;
+          z-index: 5;
+          transform: translateX(-50%);
+          width: min(92vw, 720px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: .65rem;
+          padding: .8rem 1rem;
+          border-radius: 999px;
+          color: rgba(248,250,252,.86);
+          font-size: .86rem;
+          line-height: 1.35;
+          text-align: center;
+          background: rgba(2,6,23,.42);
+          border: 1px solid rgba(255,255,255,.14);
+          backdrop-filter: blur(18px);
+          box-shadow: 0 18px 60px rgba(0,0,0,.28);
+          animation: hintIn 900ms ease 1.1s both, hintBreathe 5s ease-in-out 2.2s infinite;
+        }
+
+        .la-install-hint strong {
+          color: #ffffff;
+          font-weight: 900;
+        }
+
+        .la-install-dot {
+          width: 8px;
+          height: 8px;
+          min-width: 8px;
+          border-radius: 50%;
+          background: #7dd3fc;
+          box-shadow: 0 0 18px rgba(125,211,252,.75);
+        }
+
         @keyframes riseIn {
           from {
             opacity: 0;
@@ -289,12 +335,34 @@ export default function Home() {
           }
         }
 
+        @keyframes hintIn {
+          from {
+            opacity: 0;
+            transform: translate(-50%, 12px);
+            filter: blur(6px);
+          }
+          to {
+            opacity: 1;
+            transform: translate(-50%, 0);
+            filter: blur(0);
+          }
+        }
+
+        @keyframes hintBreathe {
+          0%, 100% {
+            opacity: .78;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
         @media (max-width: 850px) {
           .la-stage {
             min-height: 100svh;
             overflow-x: auto;
             justify-content: flex-start;
-            padding: 2rem;
+            padding: 2rem 2rem 7rem;
             scroll-snap-type: x mandatory;
           }
 
@@ -307,6 +375,13 @@ export default function Home() {
           .la-globe {
             width: 185px;
             height: 185px;
+          }
+
+          .la-install-hint {
+            bottom: .85rem;
+            border-radius: 22px;
+            font-size: .78rem;
+            padding: .75rem .9rem;
           }
         }
       `}</style>
