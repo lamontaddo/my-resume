@@ -23,6 +23,11 @@ const worlds = [
     href: "https://www.montechenterprise.com/",
   },
   {
+    title: "House of Hope",
+    video: "/house-of-hope.MP4",
+    href: "https://house-of-hope-omega.vercel.app/",
+  },
+  {
     title: "Lamont",
     video: "/lamont.MP4",
     href: "https://app.indiverse.me/world/lamont",
