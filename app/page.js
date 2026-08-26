@@ -28,6 +28,11 @@ const worlds = [
     href: "https://house-of-hope-omega.vercel.app/",
   },
   {
+    title: "Jister",
+    video: "/jister.MP4",
+    href: "https://jister.me",
+  },
+  {
     title: "Lamont",
     video: "/lamont.MP4",
     href: "https://app.indiverse.me/world/lamont",
@@ -116,26 +121,28 @@ export default function Home() {
         }
 
         .la-stage {
-          position: relative;
-          z-index: 2;
-          min-height: 100vh;
-          min-height: 100svh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: clamp(2rem, 5vw, 5rem);
-          padding: 3rem 3rem 6rem;
-        }
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2.25rem);
+  padding: 3rem 2rem 6rem;
+  box-sizing: border-box;
+}
 
         .la-orb-link {
-          display: block;
-          width: clamp(150px, 16vw, 235px);
-          height: auto;
-          border-radius: 50%;
-          text-decoration: none;
-          animation: riseIn 900ms ease both, floatOrb 6s ease-in-out infinite;
-          transition: transform 260ms ease;
-        }
+  display: block;
+  width: clamp(125px, 12vw, 190px);
+  height: auto;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  text-decoration: none;
+  animation: riseIn 900ms ease both, floatOrb 6s ease-in-out infinite;
+  transition: transform 260ms ease;
+}
 
         .la-orb-link:nth-child(2) {
           animation-duration: 900ms, 7s;
@@ -154,19 +161,19 @@ export default function Home() {
         }
 
         .la-globe {
-          position: relative;
-          width: clamp(150px, 16vw, 235px);
-          height: clamp(150px, 16vw, 235px);
-          overflow: hidden;
-          border-radius: 50%;
-          background: rgba(255,255,255,.05);
-          border: 1px solid rgba(255,255,255,.35);
-          box-shadow:
-            inset -18px -20px 45px rgba(0,0,0,.45),
-            inset 10px 12px 34px rgba(255,255,255,.12),
-            0 0 45px rgba(56,189,248,.32),
-            0 28px 80px rgba(0,0,0,.55);
-        }
+  position: relative;
+  width: clamp(125px, 12vw, 190px);
+  height: clamp(125px, 12vw, 190px);
+  overflow: hidden;
+  border-radius: 50%;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow:
+    inset -18px -20px 45px rgba(0,0,0,.45),
+    inset 10px 12px 34px rgba(255,255,255,.12),
+    0 0 45px rgba(56,189,248,.32),
+    0 28px 80px rgba(0,0,0,.55);
+}
 
         .la-orb-link:nth-child(2) .la-globe {
           box-shadow:
