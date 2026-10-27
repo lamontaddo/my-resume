@@ -33,6 +33,11 @@ const worlds = [
     href: "https://jister.me",
   },
   {
+    title: "HOEFAX",
+    video: "/hoefax.MP4",
+    href: "https://hoefax.link",
+  },
+  {
     title: "Lamont",
     video: "/lamont.MP4",
     href: "https://app.indiverse.me/world/lamont",
