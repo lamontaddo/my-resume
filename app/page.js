@@ -18,6 +18,11 @@ const worlds = [
     href: "https://cuddlebuddy.me",
   },
   {
+    title: "The Life Church",
+    video: "/tlc-hero.mp4",
+    href: "https://the-life-church.onrender.com/",
+  },
+  {
     title: "MonTech",
     video: "/monTech_animated.MP4",
     href: "https://www.montechenterprise.com/",
